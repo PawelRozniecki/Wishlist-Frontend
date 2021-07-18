@@ -13,16 +13,16 @@ export class ProductService {
 
 
   public getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiServerUrl}/product_manager/getProducts`);
+    return this.http.get<Product[]>(`${this.apiServerUrl}/product`);
   }
   public addProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(`${this.apiServerUrl}/product_manager/add`, product);
+    return this.http.post<Product>(`${this.apiServerUrl}/product`, product);
   }
   public updateProduct(product: Product): Observable<Product> {
-    return this.http.put<Product>(`${this.apiServerUrl}/product_manager/update`, product);
+    return this.http.put<Product>(`${this.apiServerUrl}/product`, product);
   }
   public deleteProduct(id: number): Observable<Product> {
-    return this.http.delete<Product>(`${this.apiServerUrl}/product_manager/delete/${id}`);
+    return this.http.delete<Product>(`${this.apiServerUrl}/product/${id}`);
   }
 
 }
