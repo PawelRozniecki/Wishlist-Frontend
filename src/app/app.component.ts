@@ -47,10 +47,9 @@ export class AppComponent implements OnInit {
     )
 
   }
-
   public onDeleteProduct(id: number): void {
     this.productService.deleteProduct(id).subscribe(
-      (response: any) => {
+      (response: void) => {
         console.log(response);
         this.getProducts();
       },
@@ -59,6 +58,9 @@ export class AppComponent implements OnInit {
       }
     );
   }
+
+
+  
   public onOpenModal(product: Product, mode: string): void {
     const container = document.getElementById('maincontainer');
     const button = document.createElement('button');
@@ -73,6 +75,7 @@ export class AppComponent implements OnInit {
       button.setAttribute('data-target', '#updateProductModal');
     }
     if (mode === 'delete') {
+
       this.deleteProduct = product;
       button.setAttribute('data-target', '#deleteProductModal');
     }
