@@ -24,6 +24,8 @@ export class AppComponent implements OnInit {
     this.productService.getProducts().subscribe(
       (response: Product[]) => {
         this.products = response;
+        
+        
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -39,6 +41,7 @@ export class AppComponent implements OnInit {
       (response:  Product)=>{
         console.log(response);
         this.getProducts(); 
+        
 
       },
       (error:HttpErrorResponse)=>{
