@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Registration form
 
-![alt text] (https://github.com/PawelRozniecki/Wishlist-Frontend/blob/registration/src/app/example.png)
+![alt text]("https://github.com/PawelRozniecki/Wishlist-Frontend/blob/registration/src/app/example.png")
